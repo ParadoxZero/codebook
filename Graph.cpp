@@ -8,7 +8,10 @@
     (4) Minimum Spanning Tree using Kruskal and Weighted Graph (2)
 */
 
-//////// Representation ////////
+
+/////////////////////////////////////////////
+// (1) Representation of Graph using class //
+/////////////////////////////////////////////
 
 class Graph
 {
@@ -31,7 +34,9 @@ void Graph::addEdge(int v, int w)
     adj[v].push_back(w); // Add w to v’s list.
 }
 
-// Representation for weighted graph
+///////////////////////////////////////////
+// (2) Representation for weighted graph //
+///////////////////////////////////////////
 
 struct Edge
 {
@@ -86,7 +91,9 @@ void create_graph_example(){
     graph->edge[4].weight = 4;
 }
 
-//////// DFS /////////
+/////////////
+// (3) DFS //
+/////////////
 
 void Graph::DFSUtil(int v, bool visited[])
 {
@@ -121,7 +128,9 @@ void Graph::DFS()
             DFSUtil(i, visited);
 }
 
-//////// Kruskal Minimum Spanning tree ////////
+///////////////////////////////////////
+// (4) Kruskal Minimum Spanning tree //
+///////////////////////////////////////
 
 struct subset
 {
