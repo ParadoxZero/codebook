@@ -7,7 +7,9 @@
     (3) Check if power of 2
 */
 
-// (1) Prime Factors ////////
+///////////////////////
+// (1) Prime Factors //
+///////////////////////
 
 void primeFactors(int n)
 {
@@ -28,24 +30,25 @@ void primeFactors(int n)
         printf ("%d ", n);
 }
 
-
-// (2) Prime Sieve ////////
+/////////////////////
+// (2) Prime Sieve //
+/////////////////////
 
 bool prime[NUM+1];
 memset(prime, true, sizeof(prime));
 
 for (int p=2; p*p<=NUM; p++)
 {
-    // If prime[p] is not changed, then it is a prime
     if (prime[p] == true)
     {
-        // Update all multiples of p
         for (int i=p*2; i<=n; i += p)
             prime[i] = false;
     }
 }
 
-// (3) Check if Power of 2 ////////
+/////////////////////////////
+// (3) Check if Power of 2 //
+/////////////////////////////
 
 bool isPowerOfTwo (int x)
 {
