@@ -43,3 +43,16 @@ void Graph::DFS(int v)
         visited[i] = false;
     DFSUtil(v, visited);
 }
+
+// In case you wish to handle disconnected graph
+
+void Graph::DFS()
+{
+    bool *visited = new bool[V];
+    for (int i = 0; i < V; i++)
+        visited[i] = false;
+ 
+    for (int i = 0; i < V; i++)
+        if (visited[i] == false)
+            DFSUtil(i, visited);
+}
