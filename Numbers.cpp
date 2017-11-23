@@ -1,5 +1,13 @@
+/*
 
-//////// Prime Factors ////////
+    Index:
+    
+    (1) Prime Factors
+    (2) Prime Sieve
+    (3) Check if power of 2
+*/
+
+// (1) Prime Factors ////////
 
 void primeFactors(int n)
 {
@@ -21,7 +29,7 @@ void primeFactors(int n)
 }
 
 
-//////// Prime Sieve ////////
+// (2) Prime Sieve ////////
 
 bool prime[NUM+1];
 memset(prime, true, sizeof(prime));
@@ -37,7 +45,7 @@ for (int p=2; p*p<=NUM; p++)
     }
 }
 
-//////// Check if Power of 2 ////////
+// (3) Check if Power of 2 ////////
 
 bool isPowerOfTwo (int x)
 {
